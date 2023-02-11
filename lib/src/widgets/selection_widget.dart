@@ -235,18 +235,8 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       child: Align(
         alignment: Alignment.centerRight,
         child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-              foregroundColor: Theme.of(context).primaryColor,
-              side: BorderSide(
-                color: Theme.of(context).primaryColor,
-                width: 2,
-              ),
-              backgroundColor: Theme.of(context).primaryColorDark,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              )),
           onPressed: onValidate,
-          child: Text("Kaydet"),
+          child: Text("OK"),
         ),
       ),
     );
@@ -269,7 +259,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
           content: _errorWidget(error),
           actions: <Widget>[
             TextButton(
-              child: new Text("Kaydet"),
+              child: new Text("OK"),
               onPressed: () {
                 Navigator.of(context).pop(false);
               },

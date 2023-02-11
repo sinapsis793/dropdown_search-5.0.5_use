@@ -235,8 +235,18 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       child: Align(
         alignment: Alignment.centerRight,
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              side: BorderSide(
+                color: Colors.white,
+                width: 2,
+              ),
+              backgroundColor: const Color(0xFF3E4249),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              )),
           onPressed: onValidate,
-          child: Text("OK"),
+          child: Text("Kaydet"),
         ),
       ),
     );

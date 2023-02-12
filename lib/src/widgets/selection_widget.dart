@@ -232,8 +232,9 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
 
     Widget defaultValidation = Padding(
       padding: EdgeInsets.all(8),
-      child: Align(
-        alignment: Alignment.centerRight,
+      child: Container(
+        width: double.infinity,
+        height: 45,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
@@ -246,7 +247,13 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
                 borderRadius: BorderRadius.circular(10),
               )),
           onPressed: onValidate,
-          child: Text("Kaydet"),
+          child: Text(
+            "Kaydet",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
     );
@@ -290,7 +297,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       return Container(
         height: 70,
         alignment: Alignment.center,
-        child: Text("No data found"),
+        child: Text("Kullanıcı Bulunamadı"),
       );
   }
 

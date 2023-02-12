@@ -297,7 +297,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       return Container(
         height: 70,
         alignment: Alignment.center,
-        child: Text("Kullanıcı Bulunamadı"),
+        child: Text("Bulunamadı!"),
       );
   }
 

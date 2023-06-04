@@ -143,10 +143,10 @@ class DropdownSearch<T> extends StatefulWidget {
   final bool isMultiSelectionMode;
   
   ///Popup Title
-  final String popupTitle;
+  final String? popupTitle;
   
   ///Button title
-  final String buttonTitle;
+  final String? buttonTitle;
   
   ///custom dropdown clear button icon properties
   final ClearButtonProps clearButtonProps;

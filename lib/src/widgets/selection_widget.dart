@@ -18,6 +18,7 @@ class SelectionWidget<T> extends StatefulWidget {
   final PopupPropsMultiSelection<T> popupProps;
   final bool isMultiSelectionMode;
 
+    
   const SelectionWidget({
     Key? key,
     required this.popupProps,
@@ -29,6 +30,7 @@ class SelectionWidget<T> extends StatefulWidget {
     this.itemAsString,
     this.filterFn,
     this.compareFn,
+
   }) : super(key: key);
 
   @override
@@ -297,7 +299,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       return Container(
         height: 70,
         alignment: Alignment.center,
-        child: Text("Kullanıcı Bulunamadı"),
+        child: Text("Bulunamadı"),
       );
   }
 

@@ -142,12 +142,6 @@ class DropdownSearch<T> extends StatefulWidget {
   ///define whatever we are in multi selection mode or single selection mode
   final bool isMultiSelectionMode;
   
-  ///Popup Title
-  final String? popupTitle;
-  
-  ///Button title
-  final String? buttonTitle;
-  
   ///custom dropdown clear button icon properties
   final ClearButtonProps clearButtonProps;
 
@@ -199,8 +193,6 @@ class DropdownSearch<T> extends StatefulWidget {
         this.validatorMultiSelection = null,
         this.onBeforeChangeMultiSelection = null,
         this.selectedItems = const [],
-        this.popupTitle = "",
-        this.buttonTitle = "",
         this.onSavedMultiSelection = null,
         this.onChangedMultiSelection = null,
         this.onBeforePopupOpeningMultiSelection = null,
@@ -238,8 +230,6 @@ class DropdownSearch<T> extends StatefulWidget {
         this.isMultiSelectionMode = true,
         this.dropdownBuilder = null,
         this.validator = null,
-        this.popupTitle = "",
-        this.buttonTitle = "",
         this.onBeforeChange = null,
         this.selectedItem = null,
         this.onSaved = null,
@@ -683,8 +673,6 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
       compareFn: widget.compareFn,
       isMultiSelectionMode: isMultiSelectionMode,
       defaultSelectedItems: List.from(getSelectedItems),
-      popupTitle: widget.popupTitle ?? "",
-      buttonTitle: widget.buttonTitle ?? "",
     );
   }
 

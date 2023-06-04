@@ -682,8 +682,8 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
       compareFn: widget.compareFn,
       isMultiSelectionMode: isMultiSelectionMode,
       defaultSelectedItems: List.from(getSelectedItems),
-      popupTitle: widget.popupTitle,
-      buttonTitle: widget.buttonTitle,
+      popupTitle: widget.popupTitle ?? "",
+      buttonTitle: widget.buttonTitle ?? "",
     );
   }
 

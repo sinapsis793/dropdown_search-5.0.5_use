@@ -141,7 +141,13 @@ class DropdownSearch<T> extends StatefulWidget {
 
   ///define whatever we are in multi selection mode or single selection mode
   final bool isMultiSelectionMode;
-
+  
+  ///Popup Title
+  final String popupTitle;
+  
+  ///Button title
+  final String buttonTitle;
+  
   ///custom dropdown clear button icon properties
   final ClearButtonProps clearButtonProps;
 
@@ -181,6 +187,9 @@ class DropdownSearch<T> extends StatefulWidget {
     this.compareFn,
     this.onBeforeChange,
     this.onBeforePopupOpening,
+    this.popupTitle,
+    this.buttonTitle,
+
     PopupProps<T> popupProps = const PopupProps.menu(),
   })  : assert(
           !popupProps.showSelectedItems || T == String || compareFn != null,
@@ -210,6 +219,8 @@ class DropdownSearch<T> extends StatefulWidget {
     this.compareFn,
     this.selectedItems = const [],
     this.popupProps = const PopupPropsMultiSelection.menu(),
+    this.popupTitle,
+    this.buttonTitle,
     FormFieldSetter<List<T>>? onSaved,
     ValueChanged<List<T>>? onChanged,
     BeforeChangeMultiSelection<T>? onBeforeChange,
@@ -671,6 +682,8 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
       compareFn: widget.compareFn,
       isMultiSelectionMode: isMultiSelectionMode,
       defaultSelectedItems: List.from(getSelectedItems),
+      popupTitle: widget.popupTitle,
+      buttonTitle: widget.buttonTitle,
     );
   }
 

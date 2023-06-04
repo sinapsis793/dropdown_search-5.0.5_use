@@ -187,8 +187,7 @@ class DropdownSearch<T> extends StatefulWidget {
     this.compareFn,
     this.onBeforeChange,
     this.onBeforePopupOpening,
-    this.popupTitle = "",
-    this.buttonTitle = "",
+   
 
     PopupProps<T> popupProps = const PopupProps.menu(),
   })  : assert(
@@ -200,6 +199,8 @@ class DropdownSearch<T> extends StatefulWidget {
         this.validatorMultiSelection = null,
         this.onBeforeChangeMultiSelection = null,
         this.selectedItems = const [],
+        this.popupTitle = "",
+        this.buttonTitle = "",
         this.onSavedMultiSelection = null,
         this.onChangedMultiSelection = null,
         this.onBeforePopupOpeningMultiSelection = null,
@@ -219,8 +220,6 @@ class DropdownSearch<T> extends StatefulWidget {
     this.compareFn,
     this.selectedItems = const [],
     this.popupProps = const PopupPropsMultiSelection.menu(),
-    this.popupTitle = "",
-    this.buttonTitle = "",
     FormFieldSetter<List<T>>? onSaved,
     ValueChanged<List<T>>? onChanged,
     BeforeChangeMultiSelection<T>? onBeforeChange,
@@ -239,6 +238,8 @@ class DropdownSearch<T> extends StatefulWidget {
         this.isMultiSelectionMode = true,
         this.dropdownBuilder = null,
         this.validator = null,
+        this.popupTitle = "",
+        this.buttonTitle = "",
         this.onBeforeChange = null,
         this.selectedItem = null,
         this.onSaved = null,

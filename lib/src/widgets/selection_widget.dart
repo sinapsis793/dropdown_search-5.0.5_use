@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -248,7 +249,11 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
               )),
           onPressed: onValidate,
           child: Text(
-            "Kaydet",
+            Platform.localeName.toString().contains("tr")
+                  ? "Kaydet"
+                  : Platform.localeName.toString().contains("de")
+                      ? "Speichern"
+                      : "Save",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -297,7 +302,11 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       return Container(
         height: 70,
         alignment: Alignment.center,
-        child: Text("Kullanıcı Bulunamadı"),
+        child: Text(Platform.localeName.toString().contains("tr")
+                ? "Kullanıcı bulunamadı!"
+                : Platform.localeName.toString().contains("de")
+                    ? "Benutzer nicht gefunden!"
+                    : "User not found!"),
       );
   }
 

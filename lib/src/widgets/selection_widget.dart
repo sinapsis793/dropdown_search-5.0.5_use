@@ -17,7 +17,9 @@ class SelectionWidget<T> extends StatefulWidget {
   final List<T> defaultSelectedItems;
   final PopupPropsMultiSelection<T> popupProps;
   final bool isMultiSelectionMode;
-
+  final String popupTitle;
+  final String buttonTitle;
+    
   const SelectionWidget({
     Key? key,
     required this.popupProps,
@@ -29,6 +31,8 @@ class SelectionWidget<T> extends StatefulWidget {
     this.itemAsString,
     this.filterFn,
     this.compareFn,
+    this.popupTitle = "No data found",
+    this.buttonTitle = "OK",
   }) : super(key: key);
 
   @override
@@ -248,7 +252,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
               )),
           onPressed: onValidate,
           child: Text(
-            "Kaydet",
+            widget.buttonTitle,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -297,7 +301,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
       return Container(
         height: 70,
         alignment: Alignment.center,
-        child: Text("Bulunamadı!"),
+        child: Text(widget.popupTitle),
       );
   }
 

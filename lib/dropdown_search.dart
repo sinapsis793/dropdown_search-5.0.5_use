@@ -107,7 +107,7 @@ class DropdownSearch<T> extends StatefulWidget {
   ///customize the fields the be shown
   final DropdownSearchItemAsString<T>? itemAsString;
 
-  ///	custom filter function
+  /// custom filter function
   final DropdownSearchFilterFn<T>? filterFn;
 
   ///enable/disable dropdownSearch
@@ -141,7 +141,7 @@ class DropdownSearch<T> extends StatefulWidget {
 
   ///define whatever we are in multi selection mode or single selection mode
   final bool isMultiSelectionMode;
-  
+
   ///custom dropdown clear button icon properties
   final ClearButtonProps clearButtonProps;
 
@@ -181,8 +181,6 @@ class DropdownSearch<T> extends StatefulWidget {
     this.compareFn,
     this.onBeforeChange,
     this.onBeforePopupOpening,
-   
-
     PopupProps<T> popupProps = const PopupProps.menu(),
   })  : assert(
           !popupProps.showSelectedItems || T == String || compareFn != null,

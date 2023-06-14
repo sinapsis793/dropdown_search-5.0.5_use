@@ -303,10 +303,10 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
         height: 70,
         alignment: Alignment.center,
         child: Text(Platform.localeName.toString().contains("tr")
-                ? "Kullanıcı bulunamadı!"
+                ? "Bulunamadı!"
                 : Platform.localeName.toString().contains("de")
-                    ? "Benutzer nicht gefunden!"
-                    : "User not found!"),
+                    ? "Nicht gefunden!"
+                    : "Not found!"),
       );
   }
 

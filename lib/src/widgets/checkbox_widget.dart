@@ -56,7 +56,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                 widget.checkBox != null
                     ? widget.checkBox!(context, v == true)
                     : Checkbox(
-                        activeColor: Color(0xffFF562A),
+                        activeColor: Color(0xffD4B0A5),
                         value: v,
                         onChanged: widget.isDisabled ? null : (b) {}),
               ],
